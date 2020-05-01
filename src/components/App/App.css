@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,14 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+* {
+  font-family: CenturyGothic;
+}
+
+:root {
+  --primary-color: #01295f;
+  --secondary--color: #ecd52a;
+  --text-color: #bfd7ea;
 }
