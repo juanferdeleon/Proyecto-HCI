@@ -1,14 +1,22 @@
 import React from "react";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import "./App.css";
 
-// Prueba
+import { configureStore } from "../../store";
+import MainScreen from "../HomePage/home_page";
 
-function App() {
+const store = configureStore();
+
+const App = () => {
   return (
-    <div className="App">
-      <p>HOLAAAAAAAAAAAA</p>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Route path="/" exact component={MainScreen} />
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;
