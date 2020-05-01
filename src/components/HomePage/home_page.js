@@ -17,7 +17,7 @@ const MainScreen = () => {
         </Parallax>
       </section>
       <section className="section section-stream">
-        <div className="content">
+        <div className="content-2">
           <Parallax speed={1}>
             <img className="play rellax" src={logo} alt="" />
           </Parallax>
