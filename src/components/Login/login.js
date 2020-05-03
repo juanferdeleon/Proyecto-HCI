@@ -19,6 +19,7 @@ const Login = () => {
         <Link to="/">
           <img src={Logo} className="login-logo" alt="" />
         </Link>
+        <h2>Inicia Sesión</h2>
         <LoginForm />
       </div>
     </div>

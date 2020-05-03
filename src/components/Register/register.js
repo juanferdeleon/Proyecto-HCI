@@ -19,6 +19,7 @@ const Register = () => {
         <Link to="/">
           <img src={Logo} className="register-logo" alt="" />
         </Link>
+        <h2>Crea Tu Cuenta</h2>
         <RegisterForm />
       </div>
     </div>
