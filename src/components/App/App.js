@@ -8,6 +8,7 @@ import { configureStore } from "../../store";
 import MainScreen from "../HomePage/home_page";
 import Login from "../Login/login";
 import Register from "../Register/register";
+import Quiz from "../Quiz/quiz";
 
 const store = configureStore();
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" exact component={MainScreen} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/quiz" component={Quiz} />
       </Router>
     </Provider>
   );
