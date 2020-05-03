@@ -1,0 +1,60 @@
+.main-container {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.img-container {
+  width: 45vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 800px;
+}
+
+.login-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-container {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 13%;
+}
+
+.login-logo {
+  width: 450px;
+}
+
+@media screen and (max-height: 885px) {
+  .login-logo {
+    width: 350px;
+  }
+}
+
+@media screen and (max-height: 770px) {
+  .login-logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1185px) {
+  .img-container {
+    display: none;
+  }
+  .main-container {
+    justify-content: center;
+  }
+  .login-container {
+    padding-left: 0%;
+  }
+}

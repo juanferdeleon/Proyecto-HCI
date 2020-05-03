@@ -1,9 +1,9 @@
 import React from "react";
-
-import logo from "./logo1.png";
-import "./style.css";
-
 import Parallax from "react-rellax";
+import { Link } from "react-router-dom";
+
+import logo from "../img/logo1.png";
+import "./style.css";
 
 const MainScreen = () => {
   return (
@@ -12,7 +12,9 @@ const MainScreen = () => {
         <Parallax speed={5}>
           <div className="content rellax">
             <h1>Nos preocupamos por tu aprendizaje</h1>
-            <button className="btn">Registrate</button>
+            <Link to="/register">
+              <button className="btn">Registrate</button>
+            </Link>
           </div>
         </Parallax>
       </section>
@@ -25,21 +27,27 @@ const MainScreen = () => {
         <div className="content rellax">
           <Parallax speed={4}>
             <div>
-              <h2 className="secondary-text">Stream Everything</h2>
+              <h2 className="secondary-text">
+                Expertos en guiar tu aprendizaje
+              </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                et dicta consectetur incidunt omnis nam quis quidem nisi ipsa
-                deserunt.
+                Sabemos lo estresante que es tratar de aprender a tocar un
+                instrumento y no ver resultados. Somos un equipo de
+                profesionales con experiencia en la educacion musical. Confia en
+                nosotros para comenzar una nueva aventura musical.
               </p>
             </div>
           </Parallax>
           <Parallax speed={4}>
             <div>
-              <h2 className="secondary-text">Short is the New Long</h2>
+              <h2 className="secondary-text">
+                Servicios adaptados a sus necesidades
+              </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                et dicta consectetur incidunt omnis nam quis quidem nisi ipsa
-                deserunt.
+                Puedes programar tus lecciones como tu desees, asi como tambien,
+                puedes acceder a tus lecciones anteriores. Todo nuestro equipo
+                ha diseñado un curso especial para ti. Explicaremos paso a paso
+                lo que necesitas saber para tocar tu instrumento.
               </p>
             </div>
           </Parallax>
