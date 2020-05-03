@@ -16,7 +16,7 @@ const Login = () => {
         />
       </div>
       <div className="login-container">
-        <Link to="/">
+        <Link to="/test">
           <img src={Logo} className="login-logo" alt="" />
         </Link>
         <h2>Inicia Sesión</h2>
