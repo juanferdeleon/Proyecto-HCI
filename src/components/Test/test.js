@@ -22,11 +22,17 @@ const Test = () => {
           <div id='1' className='option2'>bien</div>
           <div id='2' className='option3'>pos alv</div>
         </div>
-        <div className='button'>
+        <button className='button'>
           <Link to='/register' className='btn'>Siguiente</Link>
-        </div>    
+        </button>    
         <div className='answer-tracker'>
           <div className=''></div>
+          <div className=''></div>
+          <div className=''></div>
+          <div className=''></div>
+          <div className=''></div>
+          <div className=''></div>
+
         </div>
       </div>
       </section>
