@@ -1,7 +1,7 @@
 import React from "react";
 
 //import RegisterForm from "./RegisterForm/registerform";
-//import Logo from "../img/logo1.png";
+import Correct from "../img/correct.png";
 import "./style.css";
 import { Link } from "react-router-dom";
 

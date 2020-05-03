@@ -101,3 +101,9 @@ body{
     border-radius: 50%;
     margin-right: 5px;
 }
+.answer-tracker div.done{
+    background-color: green;
+   background-image: url('../img/correct.png');
+   background-position: center;
+   background-repeat: no-repeat;
+}
