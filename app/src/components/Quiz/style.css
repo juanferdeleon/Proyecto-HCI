@@ -15,6 +15,10 @@ body {
   justify-content: center;
 }
 
+.quiz-title h1 {
+  font-size: 35px;
+}
+
 .quiz-main-container {
   align-items: center;
   justify-content: center;

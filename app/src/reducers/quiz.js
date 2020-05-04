@@ -1,7 +1,7 @@
 import * as types from "../types/quiz";
 import { combineReducers } from "redux";
 
-const question = (state = 7, action) => {
+const question = (state = 1, action) => {
   switch (action.type) {
     case types.QUESTION_ANSWERED:
       let q = state;
@@ -12,7 +12,7 @@ const question = (state = 7, action) => {
   }
 };
 
-const result = (state = 5, action) => {
+const result = (state = 0, action) => {
   switch (action.type) {
     case types.QUESTION_ANSWERED:
       let r = state;
