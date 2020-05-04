@@ -1,0 +1,32 @@
+.quiz-result-img-container {
+  width: 45vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.quiz-result-img-container img {
+  height: 100vh;
+  width: 45vw;
+}
+
+.quiz-result-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 750px;
+}
+
+.info-container {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 7%;
+}

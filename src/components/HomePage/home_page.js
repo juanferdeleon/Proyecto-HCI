@@ -11,6 +11,17 @@ const MainScreen = () => {
       <section className="section-top">
         <Parallax speed={5}>
           <div className="content rellax">
+            <ul>
+              <Link to="recomendations">
+                <li>Recomendaciones</li>
+              </Link>
+              <Link to="/quiz">
+                <li>Test</li>
+              </Link>
+              <Link to="/login">
+                <li>Login</li>
+              </Link>
+            </ul>
             <h1>Nos preocupamos por tu aprendizaje</h1>
             <Link to="/register">
               <button className="btn">Registrate</button>

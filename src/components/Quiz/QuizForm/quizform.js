@@ -1,8 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import * as selectors from "../../../reducers";
 import * as actions from "../../../actions/quiz";
+import QuizResult from "../QuizResult/quizresult";
+import Logo from "../../img/logo1.png";
 
 const questions = {
   1: {
@@ -48,43 +51,54 @@ const QuizForm = ({
   onSelect,
   onSubmit,
 }) => {
-  console.log("selected answer", selected_answer);
-  return (
-    <div className="quiz-container">
-      <div className="question-number">
-        <div>
-          Pregunta{" "}
-          <span className="question-num-value">{current_question}</span> de 7
+  if (Object.keys(questions).length >= current_question) {
+    return (
+      <div className="quiz-main-container">
+        <div className="quiz-img-container">
+          <Link to="/">
+            <img src={Logo} className="login-logo" alt="" />
+          </Link>
+        </div>
+        <div className="quiz-container">
+          <div className="question-number">
+            <div>
+              Pregunta{" "}
+              <span className="question-num-value">{current_question}</span> de
+              7
+            </div>
+          </div>
+          <div className="question">{questions[current_question].question}</div>
+          <div className="options">
+            {Object.keys(questions[current_question].answers).map((answer) => (
+              <div
+                className={
+                  selected_answer
+                    ? selected_answer === answer
+                      ? "option correct"
+                      : "option"
+                    : "option"
+                }
+                onClick={(e) => onSelect(answer)}
+                key={answer}
+              >
+                {questions[current_question].answers[answer]}
+              </div>
+            ))}
+          </div>
+          <div className="answer-tracker">
+            <button
+              className="btn next"
+              onClick={(e) => onSubmit(current_question, selected_answer)}
+            >
+              Siguiente
+            </button>
+          </div>
         </div>
       </div>
-      <div className="question">{questions[current_question].question}</div>
-      <div className="options">
-        {Object.keys(questions[current_question].answers).map((answer) => (
-          <div
-            className={
-              selected_answer
-                ? selected_answer === answer
-                  ? "option correct"
-                  : "option"
-                : "option"
-            }
-            onClick={(e) => onSelect(answer)}
-            key={answer}
-          >
-            {questions[current_question].answers[answer]}
-          </div>
-        ))}
-      </div>
-      <div className="answer-tracker">
-        <button
-          className="btn next"
-          onClick={(e) => onSubmit(current_question, selected_answer)}
-        >
-          Siguiente
-        </button>
-      </div>
-    </div>
-  );
+    );
+  } else {
+    return <QuizResult />;
+  }
 };
 
 export default connect(
