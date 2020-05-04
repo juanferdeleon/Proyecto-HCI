@@ -132,6 +132,7 @@ body {
 }
 .button .btn {
   padding: 15px 50px;
+  border-left: 20px;
   border-radius: 5px;
   cursor: pointer;
   background-color: #ecd52a;
