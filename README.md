@@ -28,12 +28,22 @@ yarn start
 
 Esto ejecutara la aplicacion en modo desarrollador [http://localhost:3000](http://localhost:3000).
 
-- [rest_api](./rest_api/src)
+- [rest_api](./rest_api)
 
 Al estar dentro de rest_api debes ejecutar el siguiente comando:
 
 ```
-python manage.py runserver 0.0.0.0.:8080
+pip install -r requirements.txt
+```
+
+Esto instala todas los modulos necesarios para correr nuestra REST API
+
+- [rest_api](./rest_api/src/music_project)
+
+Al estar dentro de rest_api debes ejecutar el siguiente comando:
+
+```
+python manage.py runserver 0.0.0.0:8080
 ```
 
 Esto ejecutara la API en el puerto 8080 [http://localhost:8080](http://localhost:8080).
