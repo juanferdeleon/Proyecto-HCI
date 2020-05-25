@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,6 +7,9 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 
 import "./style.css";
 import ProfileLogo from "../../img/avatar.svg";
+import * as selectors from "../../../reducers";
+// import * as actions from "../../../actions/auth";
+// import * as actions from "../../../actions/auth";
 
 const renderInput = ({ input, meta, label }) => (
   <div
@@ -36,11 +40,15 @@ const renderInput = ({ input, meta, label }) => (
   </div>
 );
 
-const LoginForm = () => {
+const LoginForm = ({ handleSubmit, submitting, onSubmit }) => {
   return (
     <div className="login-form-container">
       <img className="avatar" src={ProfileLogo} alt="" />
-      <form>
+      <form
+        onSubmit={handleSubmit((values) =>
+          onSubmit(values.user, values.password)
+        )}
+      >
         <h2>Bienvenido</h2>
         <Field
           name="user"
@@ -57,7 +65,7 @@ const LoginForm = () => {
         <Link to="/register">
           <small>¿No tienes una cuenta?</small>
         </Link>
-        <button className="login-btn" type="submit">
+        <button className="login-btn" type="submit" disabled={submitting}>
           Login
         </button>
       </form>
@@ -82,8 +90,19 @@ const validate = (values) => {
 export default reduxForm({
   form: "loginForm",
   destroyOnUnmount: false,
-  onSubmit(values, dispatch) {
-    //TODO Validacion y manejo del estado
-  },
   validate,
-})(LoginForm);
+})(
+  connect(
+    (state) => ({
+      // isLoading: selectors.getIsAuthenticating(state),
+      // error: selectors.getAuthenticatingError(state),
+      // isAuthenticated: selectors.isAuthenticated(state),
+      // authUsername: selectors.getAuthUsername(state),
+    }),
+    (dispatch) => ({
+      onSubmit(user, password) {
+        // dispatch(actions.startLogin(user, password));
+      },
+    })
+  )(LoginForm)
+);

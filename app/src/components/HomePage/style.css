@@ -115,6 +115,13 @@ ul {
   margin-top: 50px;
 }
 
+.section-stream .content-2 .img-container {
+  background-color: #fff;
+  border-radius: 25px;
+  margin: 0.5rem;
+  height: 350px;
+}
+
 .section-stream .content-2 > div,
 .section-grid > div {
   padding: 20px;

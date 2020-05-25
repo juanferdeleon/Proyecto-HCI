@@ -29,6 +29,8 @@
 
 .register-logo {
   width: 450px;
+  background-color: white;
+  border-radius: 25px;
 }
 
 @media screen and (max-height: 885px) {
