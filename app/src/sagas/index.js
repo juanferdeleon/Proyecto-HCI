@@ -1,9 +1,9 @@
-// import { fork, all } from "redux-saga/effects";
+import { fork, all } from "redux-saga/effects";
 
-// import { watchLoginStarted, watchRefreshTokenStarted } from "./auth";
+import { watchLoginStarted, watchRefreshTokenStarted } from "./auth";
 
-// function* mainSaga() {
-//   yield all([fork(watchLoginStarted), fork(watchRefreshTokenStarted)]);
-// }
+function* mainSaga() {
+  yield all([fork(watchLoginStarted), fork(watchRefreshTokenStarted)]);
+}
 
-// export default mainSaga;
+export default mainSaga;

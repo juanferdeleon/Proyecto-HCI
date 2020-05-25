@@ -1,0 +1,68 @@
+.sidebar {
+  background-color: var(--primary-color);
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+}
+
+.sidebar .sidebar-user-info {
+  height: 35%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .sidebar-options {
+  height: 55%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .sidebar-user-options {
+  height: 10%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .profile-img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  margin: 10px;
+}
+
+.sidebar h4 {
+  color: ;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar .sidebar-option {
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+  transform: 0.5s;
+  transition-property: background;
+}
+
+.sidebar-option svg {
+  margin-right: 10px;
+}
+
+.sidebar-option .logout {
+  vertical-align: bottom;
+}
+
+.sidebar .sidebar-option:hover {
+  background: #a6d9f7;
+}

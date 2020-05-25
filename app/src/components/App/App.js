@@ -9,7 +9,8 @@ import MainScreen from "../HomePage/home_page";
 import Login from "../Login/login";
 import Register from "../Register/register";
 import Quiz from "../Quiz/quiz";
-import Recomendations from '../Recomendations/recomendations'
+import Recomendations from "../Recomendations/recomendations";
+import SideBar from "../SideBar/sidebar";
 
 const store = configureStore();
 

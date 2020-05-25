@@ -8,8 +8,7 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 import ProfileLogo from "../../img/avatar.svg";
 import * as selectors from "../../../reducers";
-// import * as actions from "../../../actions/auth";
-// import * as actions from "../../../actions/auth";
+import * as actions from "../../../actions/auth";
 
 const renderInput = ({ input, meta, label }) => (
   <div
@@ -94,14 +93,14 @@ export default reduxForm({
 })(
   connect(
     (state) => ({
-      // isLoading: selectors.getIsAuthenticating(state),
-      // error: selectors.getAuthenticatingError(state),
-      // isAuthenticated: selectors.isAuthenticated(state),
-      // authUsername: selectors.getAuthUsername(state),
+      isLoading: selectors.getIsAuthenticating(state),
+      error: selectors.getAuthenticatingError(state),
+      isAuthenticated: selectors.isAuthenticated(state),
+      authUsername: selectors.getAuthUsername(state),
     }),
     (dispatch) => ({
       onSubmit(user, password) {
-        // dispatch(actions.startLogin(user, password));
+        dispatch(actions.startLogin(user, password));
       },
     })
   )(LoginForm)
