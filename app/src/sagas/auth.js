@@ -15,7 +15,7 @@ import * as types from "../types/auth";
 
 function* login(action) {
   try {
-    const response = yield call(fetch, `${API_BASE_URL}/token-auth/`, {
+    const response = yield call(fetch, `${API_BASE_URL}/token-auth`, {
       method: "POST",
       body: JSON.stringify(action.payload),
       headers: {
@@ -71,4 +71,26 @@ function* refreshToken(action) {
 
 export function* watchRefreshTokenStarted() {
   yield takeEvery(types.TOKEN_REFRESH_STARTED, refreshToken);
+}
+
+function* createUser(action) {
+  try {
+    const response = yield call(fetch, `${API_BASE_URL}/register`, {
+      method: "POST",
+      body: JSON.stringify(action.payload),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.status === 200) {
+      console.log(response);
+      // yield put(actions.completeLogin(token));
+    } else {
+      const { non_field_errors } = yield response.json();
+      yield put(actions.failLogin(non_field_errors[0]));
+    }
+  } catch (error) {
+    yield put(actions.failLogin("Falló horrible la conexión mano"));
+  }
 }

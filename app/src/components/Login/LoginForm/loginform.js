@@ -100,6 +100,7 @@ export default reduxForm({
     }),
     (dispatch) => ({
       onSubmit(user, password) {
+        console.log(user, password);
         dispatch(actions.startLogin(user, password));
       },
     })

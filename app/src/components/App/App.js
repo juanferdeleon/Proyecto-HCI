@@ -1,5 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "./App.css";
@@ -12,18 +13,20 @@ import Quiz from "../Quiz/quiz";
 import Recomendations from "../Recomendations/recomendations";
 import SideBar from "../SideBar/sidebar";
 
-const store = configureStore();
+const { store, persistor } = configureStore();
 
 const App = () => {
   return (
     <Provider store={store}>
-      <Router>
-        <Route path="/" exact component={MainScreen} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/quiz" component={Quiz} />
-        <Route path="/recomendations" component={Recomendations} />
-      </Router>
+      <PersistGate loading={null} persistor={persistor}>
+        <Router>
+          <Route path="/" exact component={MainScreen} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/quiz" component={Quiz} />
+          <Route path="/recomendations" component={Recomendations} />
+        </Router>
+      </PersistGate>
     </Provider>
   );
 };

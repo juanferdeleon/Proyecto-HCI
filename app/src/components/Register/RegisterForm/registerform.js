@@ -6,6 +6,7 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 
 import "./style.css";
 import ProfileLogo from "../../img/avatar.svg";
+import { connect } from "react-redux";
 
 const renderInput = ({ input, meta, label }) => (
   <div
@@ -82,8 +83,18 @@ const validate = (values) => {
 export default reduxForm({
   form: "registerForm",
   destroyOnUnmount: false,
-  onSubmit(values, dispatch) {
-    //TODO Validacion y manejo del estado
-  },
   validate,
-})(RegisterForm);
+})(connect(
+  (state) => ({
+    isLoading: selectors.getIsAuthenticating(state),
+    error: selectors.getAuthenticatingError(state),
+    isAuthenticated: selectors.isAuthenticated(state),
+    authUsername: selectors.getAuthUsername(state),
+  }),
+  (dispatch) => ({
+    onSubmit(user, password) {
+      console.log(user, password);
+      dispatch(actions.startLogin(user, password));
+    },
+  }
+)(RegisterForm));
