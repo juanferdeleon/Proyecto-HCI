@@ -7,6 +7,8 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 import ProfileLogo from "../../img/avatar.svg";
 import { connect } from "react-redux";
+import * as selectors from "../../../reducers";
+import * as actions from "../../../actions/createuser";
 
 const renderInput = ({ input, meta, label }) => (
   <div
@@ -21,7 +23,7 @@ const renderInput = ({ input, meta, label }) => (
     }
   >
     <div className="i">
-      <FontAwesomeIcon icon={label === "Usuario" ? faUser : faLock} />
+      <FontAwesomeIcon icon={label === "Contraseña" ? faLock : faUser} />
     </div>
     <div>
       <h5>{label}</h5>
@@ -37,18 +39,23 @@ const renderInput = ({ input, meta, label }) => (
   </div>
 );
 
-const RegisterForm = () => {
+const RegisterForm = ({ handleSubmit, submitting, onSubmit }) => {
   return (
     <div className="register-form-container">
       <img className="avatar" src={ProfileLogo} alt="" />
-      <form>
+      <form
+        onSubmit={handleSubmit((values) =>
+          onSubmit(values.user, values.password)
+        )}
+      >
         <h2>Bienvenido</h2>
         <Field
           name="user"
           type="text"
-          label="Usuario"
+          label="Correo Electronico"
           component={renderInput}
         />
+        <Field name="name" type="text" label="Nombre" component={renderInput} />
         <Field
           name="password"
           type="password"
@@ -58,7 +65,7 @@ const RegisterForm = () => {
         <Link to="/login">
           <small>¿Ya tienes una cuenta?</small>
         </Link>
-        <button className="register-btn" type="submit">
+        <button className="register-btn" type="submit" disabled={submitting}>
           Register
         </button>
       </form>
@@ -73,6 +80,10 @@ const validate = (values) => {
     errors.user = "Campo requerido";
   }
 
+  if (!values.name) {
+    errors.name = "Campo requerido";
+  }
+
   if (!values.password) {
     errors.password = "Campo requerido";
   }
@@ -84,17 +95,17 @@ export default reduxForm({
   form: "registerForm",
   destroyOnUnmount: false,
   validate,
-})(connect(
-  (state) => ({
-    isLoading: selectors.getIsAuthenticating(state),
-    error: selectors.getAuthenticatingError(state),
-    isAuthenticated: selectors.isAuthenticated(state),
-    authUsername: selectors.getAuthUsername(state),
-  }),
-  (dispatch) => ({
-    onSubmit(user, password) {
-      console.log(user, password);
-      dispatch(actions.startLogin(user, password));
-    },
-  }
-)(RegisterForm));
+})(
+  connect(
+    (state) => ({
+      isLoading: selectors.getIsCreatingUser(state),
+      error: selectors.getCreatingUserErrorMsg(state),
+      isAuthenticated: selectors.isAuthenticated(state),
+    }),
+    (dispatch) => ({
+      onSubmit(user, password) {
+        dispatch(actions.createUser(user, password));
+      },
+    })
+  )(RegisterForm)
+);

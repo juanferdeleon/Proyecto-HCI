@@ -3,10 +3,12 @@ import { reducer as formReducer } from "redux-form";
 
 import quiz, * as quizSelectors from "./quiz";
 import auth, * as authSelectors from "./auth";
+import createUser, * as createUserSelectors from "./createuser";
 
 const reducer = combineReducers({
   quiz,
   auth,
+  createUser,
   form: formReducer,
 });
 
@@ -35,3 +37,9 @@ export const getIsRefreshingToken = (state) =>
   authSelectors.getIsRefreshingToken(state.auth);
 export const getRefreshingError = (state) =>
   authSelectors.getRefreshingError(state.auth);
+
+// Create User Selectors
+export const getCreatingUserErrorMsg = (state) =>
+  createUserSelectors.getErrorMsg(state.createUser);
+export const getIsCreatingUser = (state) =>
+  createUserSelectors.getIsLoading(state.createUser);
