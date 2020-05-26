@@ -8,15 +8,17 @@ import {
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
+import * as actions from "../../actions/auth";
+import * as selectors from "../../reducers";
 import "./styles.css";
 
-const SideBar = ({}) => {
+const SideBar = ({ authUsername, onLogout }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-user-info">
         <center>
           <img className="profile-img" src={ProfileLogo} alt="" />
-          <h4>User Name</h4>
+          <h4>{authUsername}</h4>
         </center>
       </div>
       <div className="sidebar-options">
@@ -30,7 +32,7 @@ const SideBar = ({}) => {
         </div>
       </div>
       <div className="sidebar-user-options">
-        <div className="sidebar-option logout">
+        <div className="sidebar-option logout" onClick={onLogout}>
           <FontAwesomeIcon icon={faSignOutAlt} />
           <h5>Logout</h5>
         </div>
@@ -41,7 +43,11 @@ const SideBar = ({}) => {
 
 export default connect(
   (state) => ({
-    // authUsername: selectors.getAuthUsername(state),
+    authUsername: selectors.getAuthUsername(state),
   }),
-  (dispatch) => ({})
+  (dispatch) => ({
+    onLogout() {
+      dispatch(actions.logout());
+    },
+  })
 )(SideBar);

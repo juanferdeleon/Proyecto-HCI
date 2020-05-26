@@ -66,3 +66,7 @@
 .sidebar .sidebar-option:hover {
   background: #a6d9f7;
 }
+
+.sidebar .sidebar-option:active {
+  background: var(--secondary--color);
+}

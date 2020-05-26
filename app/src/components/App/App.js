@@ -11,7 +11,7 @@ import Login from "../Login/login";
 import Register from "../Register/register";
 import Quiz from "../Quiz/quiz";
 import Recomendations from "../Recomendations/recomendations";
-import SideBar from "../SideBar/sidebar";
+import MainPage from "../MainPage/mainpage";
 
 const { store, persistor } = configureStore();
 
@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/" exact component={MainScreen} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/main-page" component={MainPage} />
           <Route path="/quiz" component={Quiz} />
           <Route path="/recomendations" component={Recomendations} />
         </Router>

@@ -25,6 +25,7 @@ function* login(action) {
 
     if (response.status === 200) {
       const { token } = yield response.json();
+      console.log("TOKEN", token);
       yield put(actions.completeLogin(token));
     } else {
       const { non_field_errors } = yield response.json();

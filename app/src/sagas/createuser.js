@@ -11,10 +11,11 @@ import {
 import { API_BASE_URL } from "../settings";
 import * as selectors from "../reducers";
 import * as actions from "../actions/createuser";
+import * as actions2 from "../actions/auth";
 import * as types from "../types/createuser";
 
 function* createUser(action) {
-  console.log(action.payload);
+  const { email, password } = action.payload;
   try {
     const response = yield call(fetch, `${API_BASE_URL}/register/`, {
       method: "POST",
@@ -24,9 +25,9 @@ function* createUser(action) {
       },
     });
 
-    if (response.status === 200) {
-      console.log("RESPONSE CREATE USER", response);
-      // yield put(actions.completeLogin(token));
+    if (response.status === 201) {
+      yield put(actions.completeCreateUser());
+      yield put(actions2.startLogin(email, password));
     } else {
       const { non_field_errors } = yield response.json();
       yield put(actions.failCreateUser(non_field_errors[0]));

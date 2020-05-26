@@ -1,8 +1,8 @@
 import * as types from "../types/createuser";
 
-export const createUser = (email, password) => ({
+export const createUser = (email, password, name) => ({
   type: types.CREATE_USER_STARTED,
-  payload: { email, password },
+  payload: { email, password, name },
 });
 
 export const completeCreateUser = () => ({

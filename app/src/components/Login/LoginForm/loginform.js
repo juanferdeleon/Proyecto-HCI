@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { reduxForm, Field } from "redux-form";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import isValidEmail from "sane-email-validation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 
@@ -39,7 +40,11 @@ const renderInput = ({ input, meta, label }) => (
   </div>
 );
 
-const LoginForm = ({ handleSubmit, submitting, onSubmit }) => {
+const LoginForm = ({ handleSubmit, submitting, onSubmit, isAuthenticated }) => {
+  console.log("IsAuth", isAuthenticated);
+  if (isAuthenticated) {
+    return <Redirect to="/main-page" />;
+  }
   return (
     <div className="login-form-container">
       <img className="avatar" src={ProfileLogo} alt="" />
@@ -77,6 +82,8 @@ const validate = (values) => {
 
   if (!values.user) {
     errors.user = "Campo requerido";
+  } else if (!isValidEmail(values.user)) {
+    errors.user = "Correo invalido";
   }
 
   if (!values.password) {
@@ -100,7 +107,6 @@ export default reduxForm({
     }),
     (dispatch) => ({
       onSubmit(user, password) {
-        console.log(user, password);
         dispatch(actions.startLogin(user, password));
       },
     })

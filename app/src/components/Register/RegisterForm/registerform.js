@@ -1,6 +1,7 @@
 import React from "react";
 import { reduxForm, Field } from "redux-form";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import isValidEmail from "sane-email-validation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 
@@ -39,15 +40,19 @@ const renderInput = ({ input, meta, label }) => (
   </div>
 );
 
-const RegisterForm = ({ handleSubmit, submitting, onSubmit }) => {
+const RegisterForm = ({
+  handleSubmit,
+  submitting,
+  onSubmit,
+  isAuthenticated,
+}) => {
+  if (isAuthenticated) {
+    return <Redirect to="/main-page" />;
+  }
   return (
     <div className="register-form-container">
       <img className="avatar" src={ProfileLogo} alt="" />
-      <form
-        onSubmit={handleSubmit((values) =>
-          onSubmit(values.user, values.password)
-        )}
-      >
+      <form onSubmit={handleSubmit((values) => onSubmit(values))}>
         <h2>Bienvenido</h2>
         <Field
           name="user"
@@ -78,6 +83,8 @@ const validate = (values) => {
 
   if (!values.user) {
     errors.user = "Campo requerido";
+  } else if (!isValidEmail(values.user)) {
+    errors.user = "Correo invalido";
   }
 
   if (!values.name) {
@@ -103,8 +110,9 @@ export default reduxForm({
       isAuthenticated: selectors.isAuthenticated(state),
     }),
     (dispatch) => ({
-      onSubmit(user, password) {
-        dispatch(actions.createUser(user, password));
+      onSubmit(values) {
+        const { user, password, name } = values;
+        dispatch(actions.createUser(user, password, name));
       },
     })
   )(RegisterForm)
