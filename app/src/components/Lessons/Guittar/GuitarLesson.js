@@ -10,7 +10,7 @@ import * as selectors from "../../../reducers";
 import { Redirect, Link } from "react-router-dom";
 import * as actions from "../../../actions/lessons";
 
-let lesson = 1;
+let lesson = 0;
 
 const GuitarLesson = ({ currentLesson, onSubmit }) => {
   return (
@@ -43,9 +43,7 @@ const GuitarLesson = ({ currentLesson, onSubmit }) => {
 };
 
 export default connect(
-  (state) => ({
-    currentLesson: selectors.getCurrentLesson(state),
-  }),
+  undefined,
   (dispatch) => ({
     onSubmit() {
       lesson += 1;

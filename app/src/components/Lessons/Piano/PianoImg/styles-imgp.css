@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     margin: 0px;
     margin-bottom: 4rem;
     overflow: hidden;
     padding: 2rem;
     font-size: x-large;
-    background-image: url("https://lh3.googleusercontent.com/proxy/qNUl62toXLCF7Llz-9zBS2H5udcFRgoWnZK5ITX9wNXUtaPRtOB3J4VyhtFVSiJMi3BJm6I5DvQAgsAIhug96dQkWRC-JZqGqjaU33ZcHP06p-FphbGEBHbJDKu8");
+    background-image: url("https://lh3.googleusercontent.com/proxy/X8eNw9ZYtR6NPI-VkzvphgQFXynPM2MxGfTNruST6FXFanOEiEKTwaZnpaItTZhrWlRKnoO6VgaXr3ympjbKedXLaCycHuKdZTPa5jzFGvzUTsXH9RsqQ077iiMd");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -22,15 +22,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     margin: 0px;
     margin-bottom: 4rem;
     overflow: hidden;
     padding: 2rem;
     font-size: x-large;
-    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-image: url("https://lh3.googleusercontent.com/proxy/2aVe3EoxV8Ruy3CF-_XfFSDDehYOjwn047LDbaYkpWVCw4FIbcDDIdvJvNIvR3nN--YQ9p1rxyG1ctt4c4Z3fw9G9kUEskePR2tB7ATS16xG_k1LmO3FqvO_");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
   
   }
   .img-lessonP3 {
@@ -39,13 +40,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     margin: 0px;
     margin-bottom: 4rem;
     overflow: hidden;
     padding: 2rem;
     font-size: x-large;
-    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-image: url("https://clasesdeguitarralima.com/wp-content/uploads/2019/04/cifrado-americano.png");
     background-position: center;
     background-size: cover;
   
@@ -56,14 +57,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     margin: 0px;
     margin-bottom: 4rem;
     overflow: hidden;
     padding: 2rem;
     font-size: x-large;
-    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-image: url("https://lh3.googleusercontent.com/proxy/yzVs3FEgQe3ggsgFFi-d1rLYMJwy4Ujo8sZOJTzmIMR4oQBj6r5OgtMibj0gKH_Ls8ZhVTA6xp7HO6tQgo6MhdfhreMGchVoJkztfuO4Gag");
     background-position: center;
-    background-size: cover;
+    background-size: 35rem;
+    background-repeat: no-repeat;
   }
   

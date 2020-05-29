@@ -15,8 +15,9 @@ const GuittarForm = ({ currentLesson }) => {
         <div className="text-lesson">
           Antes de aprender a tocar la guitarra, debemos conocer nuestro
           instrumento pues así le podremos sacar un mejor provecho y vamos
-          conociendo un poco más como está formada nuestra guitarra. Esto son
-          los elementos principales de los cuales se conforma una guitarra,
+          conociendo un poco más como está formada nuestra guitarra. 
+          <br></br><br></br>
+          Esto son los elementos principales de los cuales se conforma una guitarra,
           debemos tener en cuenta que cada uno de ellos es indispensable para
           que el instrumento pueda sonar de una mejor manera, ya que si le falta
           uno de ellos no se podrá utilizar nuestro instrumento y no le
@@ -29,6 +30,7 @@ const GuittarForm = ({ currentLesson }) => {
     return (
       <div className="Contenedor">
         <div className="text-lesson">
+        <br></br><br></br>
           Luego de que ya sabemos cuales son las partes de nuestro instrumento y
           aprendimos un poco mas sobre el, debemos de aprender cuales son las
           principales notas con su respectivo cifrado. Es muy importante
@@ -43,10 +45,15 @@ const GuittarForm = ({ currentLesson }) => {
     return (
       <div className="Contenedor">
         <div className="text-lesson">
-          Los Sostenidos y bemoles: Debemos tomar en cuenta que la nota tiene
+          Los Sostenidos y bemoles:
+          <br></br><br></br>
+           Debemos tomar en cuenta que la nota tiene
           sostenidos los cuales están un semi-tono arriba de la nota y se
-          denominan con un “#” y los bemoles están un semi-tono debajo de la
-          nota y se denominan con '♭'. NOTA: LAS NOTAS “E” Y “B” NO TIENEN
+          denominan con un “#”. <br></br>
+          Los bemoles están un semi-tono debajo de la
+          nota y se denominan con '♭'.
+          <br></br><br></br>
+           NOTA: LAS NOTAS “E” Y “B” NO TIENEN
           SOSTENIDOS.
         </div>
       </div>
@@ -56,7 +63,9 @@ const GuittarForm = ({ currentLesson }) => {
     return (
       <div className="Contenedor">
         <div className="text-lesson">
-          Acordes: Después de haber aprendido cuales son las notas sus
+          Acordes: 
+          <br></br><br></br>
+          Después de haber aprendido cuales son las notas sus
           sostenidos y bemoles, debemos proceder a ver como se crean las acordes
           en los trastes de la guitarra y para esto debemos saber que existen
           los acordes mayores y menores. Pero antes de ver los acordes, debemos

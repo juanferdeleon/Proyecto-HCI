@@ -8,8 +8,12 @@ import PianoImg from  './PianoImg/PianoImg'
 import { connect } from "react-redux";
 import * as selectors from "../../../reducers";
 import { Redirect, Link } from "react-router-dom";
+import * as actions from "../../../actions/lessons";
 
-const PianoLesson = () => {
+
+let lesson = 0;
+
+const PianoLesson = ({ currentLesson, onSubmit }) => {
   return (
     <div className="user-main-container">
       <div className="sidebar-container">
@@ -28,11 +32,21 @@ const PianoLesson = () => {
               </div>
             </div>
           </div>
-          <div className="next-button"><span>Siguiente</span></div>
+          <div className="next-button" onClick={onSubmit}
+          ><span>Siguiente</span></div>
         </div>
       </div>
     </div>
   );
 };
 
-export default PianoLesson;
+export default connect(
+  undefined,
+  (dispatch) => ({
+    onSubmit() {
+      lesson += 1;
+      console.log(lesson);
+      dispatch(actions.changeLesson(lesson));
+    },
+  })
+)(PianoLesson);

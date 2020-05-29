@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 55vh;
+    height: 50vh;
     margin: 0px;
     margin-bottom: 4rem;
     overflow: hidden;
@@ -22,15 +22,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     margin: 0px;
     margin-bottom: 4rem;
     overflow: hidden;
     padding: 2rem;
     font-size: x-large;
-    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-image: url("https://bateriaselectricas.com/wp-content/uploads/Captura-de-pantalla-2018-03-18-a-las-14.22.36-300x289.png");
     background-position: center;
-    background-size: cover;
+    background-size: 30rem;
+    background-repeat: no-repeat;
   
   }
   .img-lessonB3 {
@@ -39,13 +40,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     margin: 0px;
     margin-bottom: 4rem;
     overflow: hidden;
     padding: 2rem;
     font-size: x-large;
-    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-image: url("https://sites.google.com/site/aprendebateriawq/_/rsrc/1456772758595/proceso/7.PNG");
     background-position: center;
     background-size: cover;
   
@@ -56,14 +57,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     margin: 0px;
     margin-bottom: 4rem;
     overflow: hidden;
     padding: 2rem;
     font-size: x-large;
-    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-image: url("https://drum.stringlettermusic.com/wp-content/uploads/2016/08/0207-fe-physiology03.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: 35rem;
+    background-repeat: no-repeat;
   }
   

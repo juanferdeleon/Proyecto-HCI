@@ -5,10 +5,13 @@ import SideBar from "../../SideBar/sidebar";
 import ViolinForm from './ViolinForm/ViolinForm'
 import ViolinImg from  './ViolinImg/ViolinImg'
 import { connect } from "react-redux";
+import * as actions from "../../../actions/lessons";
 import * as selectors from "../../../reducers";
 import { Redirect, Link } from "react-router-dom";
 
-const ViolinLesson = () => {
+let lesson = 0;
+
+const ViolinLesson = ({ currentLesson, onSubmit }) => {
   return (
     <div className="user-main-container">
       <div className="sidebar-container">
@@ -27,11 +30,20 @@ const ViolinLesson = () => {
               </div>
             </div>
           </div>
-          <div className="next-button"><span>Siguiente</span></div>
+          <div className="next-button" onClick={onSubmit}>
+            <span>Siguiente</span></div>
         </div>
       </div>
     </div>
   );
 };
-
-export default ViolinLesson;
+export default connect(
+  undefined,
+  (dispatch) => ({
+    onSubmit() {
+      lesson += 1;
+      console.log(lesson);
+      dispatch(actions.changeLesson(lesson));
+    },
+  })
+)(ViolinLesson);

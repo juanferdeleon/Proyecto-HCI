@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import "./styles-imgp.css";
 import * as selectors from "../../../../reducers";
 
-const current_lesson =1 
-const PianoImg = ({current_lesson}) => {
-    if (current_lesson=1) {
+const PianoImg = ({currentLesson}) => {
+    if (currentLesson === 0) {
       return (
         <div className='Contenedor'>
            <div className="img-lessonP1">
@@ -14,21 +13,21 @@ const PianoImg = ({current_lesson}) => {
         </div> 
       );
     }
-    if(current_lesson=2) {
+    if(currentLesson===1) {
       return (
         <div className='Contenedor'>
            <div className="img-lessonP2"></div>
         </div> 
       ); 
     }
-    if(current_lesson=3) {
+    if(currentLesson===2) {
       return (
         <div className='Contenedor'>
            <div className="img-lessonP3"></div>
         </div> 
       ); 
     }
-    if(current_lesson=4) {
+    if(currentLesson===3) {
       return (
         <div className='Contenedor'>
            <div className="img-lessonP4"></div>
@@ -37,4 +36,6 @@ const PianoImg = ({current_lesson}) => {
     }
   };
   
-  export default PianoImg;  
+  export default connect((state) => ({
+    currentLesson: selectors.getCurrentLesson(state),
+  }))(PianoImg); 

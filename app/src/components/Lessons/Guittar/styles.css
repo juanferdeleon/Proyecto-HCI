@@ -13,15 +13,10 @@
   }
   .cont-general{
     width: 90%;
-    height: 95%;
-    /*border-bottom: 1px solid red;
-    border-left: 1px solid red;
-    border-top: 1px solid red;
-    border-right: 1px solid red;*/
+    height: 95%; 
     margin-left: 80px;
     margin-top: 20px;
     border-radius: 50px;
-   /* background-image: url('https://www.imusic-school.com/wp-content/uploads/2019/08/tarifas_banner.png');*/
     background-size: cover;
     background-repeat:no-repeat;
   }
@@ -29,9 +24,7 @@
   .title{
     width: 80%;
     height: 15vh;
-    /*background-image: linear-gradient(to bottom , rgb(31, 31, 121), rgb(128, 159, 245));*/
     margin-left: 10%;
-    /*margin-right: 5%;*/
     margin-top: 25px;
     border-bottom: 1px solid #ccc;
     justify-content: center;

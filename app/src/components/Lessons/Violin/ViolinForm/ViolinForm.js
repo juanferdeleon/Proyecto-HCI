@@ -4,55 +4,83 @@ import { Link } from "react-router-dom";
 import "./styles-formv.css";
 import * as selectors from "../../../../reducers";
 
-const current_lesson =1
-const ViolinForm = ({current_lesson}) => {
-    if (current_lesson=1) {
+
+const ViolinForm = ({currentLesson })  => {
+    if (currentLesson === 0) {
       return (
         <div className='Contenedor'>
            <div className="text-lesson">
             Lección No.1 Conociendo el instrumento y sus notas.
-            Debemos tener claro que en el piano existen varias secciones en donde se vuelven a 
-            repetir las notas, esto lo entenderemos mejor en la siguiente imagen.
-            Como se puede observar siempre se inicia con un Do y termina con un SI y se vuelve a repetir.
-
+            <br></br>
+            <br></br>
+            Debemos saber que el violin es uno de los instrumentos mas fragiles y costosos,
+            esto se debe a su comlejo proceso de fabricacion y los materiales utilizados.
+            En la figura se pueden observar las partes del violin y del arco.
+            <br></br>
+            <br></br>
+            Las principales son el alma, diapason, barbada, puente, cuerdas y clavijas, 
+            esto se debe a que seran los componentes mas mecionados dentro del proceso inicial de aprendizaje
            </div>
         </div> 
       );
     }
-    if (current_lesson=2) {
+    if (currentLesson === 1) {
       return (
         <div className='Contenedor'>
            <div className="text-lesson">
-            Es muy importante aprendernos el cifrado, ya que cuando queramos buscar las notas de 
-            cualquier canción nos aparecerán con el cifrado y no con el nombre de la nota.
-            Sostenidos y bemoles (estos se encuentran en las teclas negras de piano)
-            Debemos tomar en cuenta que la nota tiene sostenidos los cuales están un semi-tono 
-            arriba de la nota y se denominan con un “#” y los bemoles están un semi-tono debajo de la nota y se denominan con” ♭”.
-            NOTA: LAS NOTAS “E” Y “B” NO TIENEN SOSTENIDOS.
+           Lección No.1 Conociendo el instrumento y sus notas.
+            <br></br>
+            Debemos saber que el violin tiene 4 cuerdas, estas de izquierda a derecha son:<br></br>
+            Sol<br></br>
+             Re<br></br>
+             La<br></br>
+             Mi<br></br>
+            <br></br>
+            Para poder tocar este instrumento se utilizan todos los dedos a excepcion del pulgar,
+            ya que este funcionara como soporte del diapason al momento de tenerlo en posicion.
+   
            </div>
         </div> 
       );
     }
-    if (current_lesson=3) {
+    if (currentLesson === 2) {
       return (
         <div className='Contenedor'>
            <div className="text-lesson">
-           Lección No.2 Acordes 
-            Después de haber aprendido cuales son las notas sus sostenidos y bemoles,
-             debemos proceder a ver como se crean las acordes en las teclas del piano y para esto
-             debemos saber que existen los acordes mayores y menores.
+           Lección No.2 La postura 
+           <br></br>
+            <br></br>
+            La espalda debe estar recta y relajada <br></br>
+            El violin se sujeta entre la clavicula y la barbilla, nunca con el hombro,
+            de esta manera se evita tension.<br></br>
+            El brazo izquierdo debe estar en un angulo recto con el cuerpo y el hombro relajado<br></br>
+            El codo izquierdo se mantiene siempre aljeado del cuerpo, sin apollarlo en la cadera<br></br>
+            La almohadilla tiene como funcion mantener el cuello elevado, el cuello no debe estar
+            tenso ni forzado.
            </div>
         </div> 
       );
     }
-    if (current_lesson=4) {
+    if (currentLesson === 3) {
       return (
         <div className='Contenedor'>
-           <div className="mayores">
+           <div className="text-lesson">
+           Movimiento del arco
+           <br></br>
+           <br></br>
+           La manera correcta de agarrar el arco es unicamente con 4 dedos, sosteniendolo suave pero 
+           firmemente por el entorchado, sin empuñar, unicamente con las llemas. 
+           <br></br>
+           <br></br>
+            Existen distintas tecnicas de movimiento del arco. La fundamental se llama Detache,
+            esta estudiaremos. Es el movimiento básico en el cuál cada nota se toca en un golpe de 
+            arco, empleándose una fracción del arco (mitad, tercio, cuarto…).
            </div>
         </div> 
       );
     }
   };
   
-  export default ViolinForm;  
+  export default connect((state) => ({
+    currentLesson: selectors.getCurrentLesson(state),
+  }))(ViolinForm);  
