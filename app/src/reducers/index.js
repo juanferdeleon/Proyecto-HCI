@@ -4,11 +4,13 @@ import { reducer as formReducer } from "redux-form";
 import quiz, * as quizSelectors from "./quiz";
 import auth, * as authSelectors from "./auth";
 import createUser, * as createUserSelectors from "./createuser";
+import lessons, * as lessonsSelectors from "./lessons";
 
 const reducer = combineReducers({
   quiz,
   auth,
   createUser,
+  lessons,
   form: formReducer,
 });
 
@@ -43,3 +45,7 @@ export const getCreatingUserErrorMsg = (state) =>
   createUserSelectors.getErrorMsg(state.createUser);
 export const getIsCreatingUser = (state) =>
   createUserSelectors.getIsLoading(state.createUser);
+
+// Lessons Selectors
+export const getCurrentLesson = (state) =>
+  lessonsSelectors.getCurrentLesson(state.lessons);
