@@ -59,7 +59,8 @@ const MainPage = ({ isAuthenticated }) => {
           <div className="promo-lessons">
             <h1>Por si te interesa.</h1>
             <div className="lessons">
-              <div class="lesson">
+            <Link to="/GuitarLesson">
+              <div class="lesson" >
                 <div class="lesson__image_1"></div>
                 <div class="lesson__footer">
                   <div class="lesson__meta">
@@ -68,6 +69,8 @@ const MainPage = ({ isAuthenticated }) => {
                   </div>
                 </div>
               </div>
+              </Link>
+              <Link to="/PianoLesson">
               <div class="lesson">
                 <div class="lesson__image_2"></div>
                 <div class="lesson__footer">
@@ -77,6 +80,8 @@ const MainPage = ({ isAuthenticated }) => {
                   </div>
                 </div>
               </div>
+              </Link>
+              <Link to="/ViolinLesson">
               <div class="lesson">
                 <div class="lesson__image_3"></div>
                 <div class="lesson__footer">
@@ -86,6 +91,8 @@ const MainPage = ({ isAuthenticated }) => {
                   </div>
                 </div>
               </div>
+              </Link>
+              <Link to="/BateriaLesson">
               <div class="lesson">
                 <div class="lesson__image_4"></div>
                 <div class="lesson__footer">
@@ -95,6 +102,7 @@ const MainPage = ({ isAuthenticated }) => {
                   </div>
                 </div>
               </div>
+              </Link>
             </div>
           </div>
         </div>

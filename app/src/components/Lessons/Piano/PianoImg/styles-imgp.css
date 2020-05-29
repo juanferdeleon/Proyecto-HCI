@@ -1,0 +1,69 @@
+.img-lessonP1 {
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    margin: 0px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    padding: 2rem;
+    font-size: x-large;
+    background-image: url("https://lh3.googleusercontent.com/proxy/qNUl62toXLCF7Llz-9zBS2H5udcFRgoWnZK5ITX9wNXUtaPRtOB3J4VyhtFVSiJMi3BJm6I5DvQAgsAIhug96dQkWRC-JZqGqjaU33ZcHP06p-FphbGEBHbJDKu8");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .img-lessonP2 {
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    margin: 0px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    padding: 2rem;
+    font-size: x-large;
+    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-position: center;
+    background-size: cover;
+  
+  }
+  .img-lessonP3 {
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    margin: 0px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    padding: 2rem;
+    font-size: x-large;
+    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-position: center;
+    background-size: cover;
+  
+  }
+  .img-lessonP4 {
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    margin: 0px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    padding: 2rem;
+    font-size: x-large;
+    background-image: url("https://images.alphacoders.com/876/876726.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  

@@ -12,6 +12,12 @@ import Register from "../Register/register";
 import Quiz from "../Quiz/quiz";
 import Recomendations from "../Recomendations/recomendations";
 import MainPage from "../MainPage/mainpage";
+import sidebar from "../SideBar/sidebar";
+import GuitarLesson from "../Lessons/Guittar/GuitarLesson";
+import PianoLesson from "../Lessons/Piano/PianoLesson";
+import BateriaLesson from "../Lessons/Bateria/BateriaLesson";
+import ViolinLesson from "../Lessons/Violin/ViolinLesson";
+
 
 const { store, persistor } = configureStore();
 
@@ -26,6 +32,10 @@ const App = () => {
           <Route path="/main-page" component={MainPage} />
           <Route path="/quiz" component={Quiz} />
           <Route path="/recomendations" component={Recomendations} />
+          <Route path="/GuitarLesson" exact component={GuitarLesson} />
+          <Route path="/PianoLesson" exact component={PianoLesson} />
+          <Route path="/BateriaLesson" exact component={BateriaLesson} />
+          <Route path="/ViolinLesson" exact component={ViolinLesson} />
         </Router>
       </PersistGate>
     </Provider>

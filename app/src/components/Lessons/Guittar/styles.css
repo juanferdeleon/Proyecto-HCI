@@ -1,0 +1,82 @@
+
+ .lesson-cont {
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 50vh;
+    margin: 10px;
+    overflow: hidden;
+    font-size: x-large;
+    background-color:#fff;
+  }
+  .cont-general{
+    width: 90%;
+    height: 95%;
+    /*border-bottom: 1px solid red;
+    border-left: 1px solid red;
+    border-top: 1px solid red;
+    border-right: 1px solid red;*/
+    margin-left: 80px;
+    margin-top: 20px;
+    border-radius: 50px;
+   /* background-image: url('https://www.imusic-school.com/wp-content/uploads/2019/08/tarifas_banner.png');*/
+    background-size: cover;
+    background-repeat:no-repeat;
+  }
+
+  .title{
+    width: 80%;
+    height: 15vh;
+    /*background-image: linear-gradient(to bottom , rgb(31, 31, 121), rgb(128, 159, 245));*/
+    margin-left: 10%;
+    /*margin-right: 5%;*/
+    margin-top: 25px;
+    border-bottom: 1px solid #ccc;
+    justify-content: center;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    padding: 2rem;
+    font-size: 50px;
+  }
+
+  .next-button{
+    border-radius: 50px;
+    background-color:rgb(228, 195, 31);
+    border: none;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 25%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 38%;
+  }
+  .next-button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: lavender; /*aqui cambio color de texto del boton*/
+  }
+
+  .next-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .next-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .next-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
