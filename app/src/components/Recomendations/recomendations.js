@@ -36,7 +36,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Guitarra Viva</div>
+                      <div className="title-re">Guitarra Viva</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={GuitarraViva} />
@@ -67,7 +67,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Musucom</div>
+                      <div className="title-re">Musucom</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={MusyCom} />
@@ -94,7 +94,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Simply Piano</div>
+                      <div className="title-re">Simply Piano</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={SPiano} />
@@ -122,7 +122,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Pianote</div>
+                      <div className="title-re">Pianote</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={Pianote} />
@@ -151,7 +151,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Real Drum</div>
+                      <div className="title-re">Real Drum</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={RealD} />
@@ -179,7 +179,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Yousician</div>
+                      <div className="title-re">Yousician</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={Yousician} />
@@ -207,7 +207,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Trala</div>
+                      <div className="title-re">Trala</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={Trala} />
@@ -238,7 +238,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Walk band</div>
+                      <div className="title-re">Walk band</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={WalkBand} />
@@ -266,7 +266,7 @@ const Recomendations = () => {
                 <div class="flip-card-front">
                   <div class="card">
                     <div className="title-cont">
-                      <div className="title">Musecore</div>
+                      <div className="title-re">Musecore</div>
                     </div>
                     <div className="contenido">
                       <img className="fotitas" src={Musecore} />
