@@ -7,14 +7,19 @@
 }
 
 .sidebar .sidebar-user-info {
-  height: 35%;
-  position: relative;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  height: 25%;
   align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar-user-info .user-info {
+  font-size: 0.75rem;
 }
 
 .sidebar .sidebar-options {
-  height: 55%;
+  height: 75%;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -28,8 +33,7 @@
 }
 
 .sidebar .profile-img {
-  width: 200px;
-  height: 200px;
+  width: 4rem;
   margin-bottom: 10px;
   margin: 10px;
 }
@@ -65,8 +69,29 @@
 
 .sidebar .sidebar-option:hover {
   background: var(--secondary--color);
+  transition: 0.3s;
 }
 
 .sidebar .sidebar-option:active {
   background: #a6d9f7;
+}
+
+.sidebar-option.selected {
+  background-color: #fff;
+  color: var(--primary-color);
+  height: 5rem;
+  font-size: 2rem;
+  transition: 0.5s;
+}
+
+.sidebar .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: #fff;
+}
+
+.sidebar .logo-container img {
+  width: 10rem;
 }

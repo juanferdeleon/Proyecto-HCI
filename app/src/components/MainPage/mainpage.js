@@ -19,6 +19,57 @@ const MainPage = ({ isAuthenticated }) => {
         <SideBar />
       </div>
       <div className="lessons-container">
+        <div className="lower-container">
+          <div className="promo-lessons">
+            <h1>Por si te interesa.</h1>
+            <div className="lessons">
+              <Link to="/GuitarLesson">
+                <div class="lesson">
+                  <div class="lesson__image_1"></div>
+                  <div class="lesson__footer">
+                    <div class="lesson__meta">
+                      <div class="lesson__title">Guittarra</div>
+                      <div class="lesson__size">Basics</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/PianoLesson">
+                <div class="lesson">
+                  <div class="lesson__image_2"></div>
+                  <div class="lesson__footer">
+                    <div class="lesson__meta">
+                      <div class="lesson__title">Piano</div>
+                      <div class="lesson__size">Basics</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/ViolinLesson">
+                <div class="lesson">
+                  <div class="lesson__image_3"></div>
+                  <div class="lesson__footer">
+                    <div class="lesson__meta">
+                      <div class="lesson__title">Violin</div>
+                      <div class="lesson__size">Basics</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/BateriaLesson">
+                <div class="lesson">
+                  <div class="lesson__image_4"></div>
+                  <div class="lesson__footer">
+                    <div class="lesson__meta">
+                      <div class="lesson__title">Bateria</div>
+                      <div class="lesson__size">Basics</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
         <div className="upper-container">
           <div className="promo-test">
             <div className="description-test">
@@ -52,57 +103,6 @@ const MainPage = ({ isAuthenticated }) => {
             </div>
             <div>
               <img src={recomendationsImg} alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="lower-container">
-          <div className="promo-lessons">
-            <h1>Por si te interesa.</h1>
-            <div className="lessons">
-            <Link to="/GuitarLesson">
-              <div class="lesson" >
-                <div class="lesson__image_1"></div>
-                <div class="lesson__footer">
-                  <div class="lesson__meta">
-                    <div class="lesson__title">Guittarra</div>
-                    <div class="lesson__size">Basics</div>
-                  </div>
-                </div>
-              </div>
-              </Link>
-              <Link to="/PianoLesson">
-              <div class="lesson">
-                <div class="lesson__image_2"></div>
-                <div class="lesson__footer">
-                  <div class="lesson__meta">
-                    <div class="lesson__title">Piano</div>
-                    <div class="lesson__size">Basics</div>
-                  </div>
-                </div>
-              </div>
-              </Link>
-              <Link to="/ViolinLesson">
-              <div class="lesson">
-                <div class="lesson__image_3"></div>
-                <div class="lesson__footer">
-                  <div class="lesson__meta">
-                    <div class="lesson__title">Violin</div>
-                    <div class="lesson__size">Basics</div>
-                  </div>
-                </div>
-              </div>
-              </Link>
-              <Link to="/BateriaLesson">
-              <div class="lesson">
-                <div class="lesson__image_4"></div>
-                <div class="lesson__footer">
-                  <div class="lesson__meta">
-                    <div class="lesson__title">Bateria</div>
-                    <div class="lesson__size">Basics</div>
-                  </div>
-                </div>
-              </div>
-              </Link>
             </div>
           </div>
         </div>

@@ -74,6 +74,10 @@ ul {
   text-align: center;
 }
 
+.section-top ul li {
+  color: #fff;
+}
+
 .section-top h1 {
   font-size: 70px;
   line-height: 1.3;

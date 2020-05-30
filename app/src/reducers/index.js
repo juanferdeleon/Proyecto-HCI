@@ -5,12 +5,14 @@ import quiz, * as quizSelectors from "./quiz";
 import auth, * as authSelectors from "./auth";
 import createUser, * as createUserSelectors from "./createuser";
 import lessons, * as lessonsSelectors from "./lessons";
+import navigation, * as navigationSelectors from "./navigation";
 
 const reducer = combineReducers({
   quiz,
   auth,
   createUser,
   lessons,
+  navigation,
   form: formReducer,
 });
 
@@ -49,3 +51,7 @@ export const getIsCreatingUser = (state) =>
 // Lessons Selectors
 export const getCurrentLesson = (state) =>
   lessonsSelectors.getCurrentLesson(state.lessons);
+
+// Navigation Selectors
+export const getNavigationWindow = (state) =>
+  navigationSelectors.getNavigationWindow(state.navigation);

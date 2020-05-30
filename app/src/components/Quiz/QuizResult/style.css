@@ -22,6 +22,16 @@
   width: 750px;
 }
 
+.quiz-result-content .quiz-result-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.quiz-result-btns button {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 .info-container {
   position: relative;
   align-items: center;

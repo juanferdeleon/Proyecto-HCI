@@ -39,9 +39,14 @@ const QuizResult = ({ quiz_result }) => {
               caso del violín. Conviene que la estatura sea alta o media y los
               brazos, largos.
             </p>
-            <Link to="/register">
-              <button className="btn">Registrate</button>
-            </Link>
+            <div className="quiz-result-btns">
+              <Link to="/register">
+                <button className="btn">Registrate</button>
+              </Link>
+              <Link to="/">
+                <button className="btn">Volver al Inicio</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -78,9 +83,14 @@ const QuizResult = ({ quiz_result }) => {
               caso del violín. Conviene que la estatura sea alta o media y los
               brazos, largos.
             </p>
-            <Link to="/register">
-              <button className="btn">Registrate</button>
-            </Link>
+            <div className="quiz-result-btns">
+              <Link to="/register">
+                <button className="btn">Registrate</button>
+              </Link>
+              <Link to="/">
+                <button className="btn">Volver al Inicio</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -114,9 +124,14 @@ const QuizResult = ({ quiz_result }) => {
               hiperactivos, que necesitan liberar energía. Conviene empezar con
               el tambor y pasar luego a los otros.
             </p>
-            <Link to="/register">
-              <button className="btn">Registrate</button>
-            </Link>
+            <div className="quiz-result-btns">
+              <Link to="/register">
+                <button className="btn">Registrate</button>
+              </Link>
+              <Link to="/">
+                <button className="btn">Volver al Inicio</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

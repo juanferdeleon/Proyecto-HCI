@@ -1,71 +1,68 @@
-  .img-lessonB1 {
-    border-radius: 2rem;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50vh;
-    margin: 0px;
-    margin-bottom: 4rem;
-    overflow: hidden;
-    padding: 2rem;
-    font-size: x-large;
-    background-image: url("https://www.partesdel.com/wp-content/uploads/partes-de-la-bateria.jpg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+.img-lessonB1 {
+  border-radius: 2rem;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  margin: 0px;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 2rem;
+  font-size: x-large;
+  background-image: url("https://s3.amazonaws.com/drumeoblog/beat/wp-content/uploads/2019/11/22114343/blog-graphics-labeled-drum-kit.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-  .img-lessonB2 {
-    border-radius: 2rem;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50vh;
-    margin: 0px;
-    margin-bottom: 4rem;
-    overflow: hidden;
-    padding: 2rem;
-    font-size: x-large;
-    background-image: url("https://bateriaselectricas.com/wp-content/uploads/Captura-de-pantalla-2018-03-18-a-las-14.22.36-300x289.png");
-    background-position: center;
-    background-size: 30rem;
-    background-repeat: no-repeat;
-  
-  }
-  .img-lessonB3 {
-    border-radius: 2rem;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50vh;
-    margin: 0px;
-    margin-bottom: 4rem;
-    overflow: hidden;
-    padding: 2rem;
-    font-size: x-large;
-    background-image: url("https://sites.google.com/site/aprendebateriawq/_/rsrc/1456772758595/proceso/7.PNG");
-    background-position: center;
-    background-size: cover;
-  
-  }
-  .img-lessonB4 {
-    border-radius: 2rem;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50vh;
-    margin: 0px;
-    margin-bottom: 4rem;
-    overflow: hidden;
-    padding: 2rem;
-    font-size: x-large;
-    background-image: url("https://drum.stringlettermusic.com/wp-content/uploads/2016/08/0207-fe-physiology03.jpg");
-    background-position: center;
-    background-size: 35rem;
-    background-repeat: no-repeat;
-  }
-  
+.img-lessonB2 {
+  border-radius: 2rem;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  margin: 0px;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 2rem;
+  font-size: x-large;
+  background-image: url("https://bateriaselectricas.com/wp-content/uploads/Captura-de-pantalla-2018-03-18-a-las-14.22.36-300x289.png");
+  background-position: center;
+  background-size: 30rem;
+  background-repeat: no-repeat;
+}
+.img-lessonB3 {
+  border-radius: 2rem;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  margin: 0px;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 2rem;
+  font-size: x-large;
+  background-image: url("https://sites.google.com/site/aprendebateriawq/_/rsrc/1456772758595/proceso/7.PNG");
+  background-position: center;
+  background-size: cover;
+}
+.img-lessonB4 {
+  border-radius: 2rem;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  margin: 0px;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 2rem;
+  font-size: x-large;
+  background-image: url("https://drum.stringlettermusic.com/wp-content/uploads/2016/08/0207-fe-physiology03.jpg");
+  background-position: center;
+  background-size: 35rem;
+  background-repeat: no-repeat;
+}
